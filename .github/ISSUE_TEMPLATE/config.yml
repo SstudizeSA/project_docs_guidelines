@@ -1,0 +1,10 @@
+# Controls the issue chooser page on GitHub.
+# blank_issues_enabled: false forces people to pick a template.
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a question
+    url: https://github.com/[org]/[repo]/discussions
+    about: Use Discussions for how to questions, not issues.
+  - name: Report a security problem
+    url: https://github.com/[org]/[repo]/security/advisories/new
+    about: Private report only. Never use a public issue. See SECURITY.md.

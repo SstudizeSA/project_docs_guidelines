@@ -1,0 +1,44 @@
+# CODEOWNERS
+#
+# Each line is: path pattern, then one or more owners. The LAST matching line wins.
+# Owners can be users (@name), teams (@org/team), or emails.
+# Turn on "Require review from Code Owners" in branch protection so this is enforced.
+# Place this file in the repo root, in docs/, or in .github/.
+#
+# Rules:
+#   * Every folder should have an owner. Use teams, not single people.
+#   * Keep at least 2 people in each team so reviews never block on one person.
+#   * Review this file every quarter and when people change roles.
+
+# Default owner for everything
+*                           @[org]/[engineering]
+
+# Application code
+/src/api/                   @[org]/[backend]
+/src/web/                   @[org]/[frontend]
+/src/workers/               @[org]/[backend]
+
+# Sensitive areas (2 approvals required by CONTRIBUTING.md)
+/src/auth/                  @[org]/[security] @[org]/[backend]
+/src/payments/              @[org]/[payments] @[org]/[security]
+/migrations/                @[org]/[database] @[org]/[backend]
+
+# Infrastructure and delivery
+/infra/                     @[org]/[platform]
+/Dockerfile                 @[org]/[platform]
+/.github/workflows/         @[org]/[platform]
+
+# Tests
+/tests/                     @[org]/[qa] @[org]/[engineering]
+
+# Documentation
+/docs/                      @[org]/[engineering]
+/docs/adr/                  @[org]/[tech_leads]
+/SECURITY.md                @[org]/[security]
+/CODE_OF_CONDUCT.md         @[org]/[project_managers]
+/LICENSE                    @[org]/[legal]
+/CHANGELOG.md               @[org]/[engineering] @[org]/[qa]
+
+# ML work (remove if not used)
+/docs/ml/                   @[org]/[ml]
+/src/prompts/               @[org]/[ml]
